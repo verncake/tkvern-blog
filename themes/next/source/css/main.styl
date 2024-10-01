@@ -45,3 +45,20 @@ for $inject_mixin in hexo-config('injects.mixin')
 // --------------------------------------------------
 for $inject_style in hexo-config('injects.style')
   @import $inject_style;
+
+@font-face {
+    font-family: "Yanzhi";
+    src: url("../fonts/Yanzhi.ttf") format('truetype')
+}
+
+.poem {
+    font-family: 'Yanzhi';
+    color: #000;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 140%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
