@@ -236,7 +236,7 @@ NexT.utils = {
       // TOC item animation navigate.
       link.addEventListener('click', event => {
         event.preventDefault();
-        var target = document.getElementById(event.currentTarget.getAttribute('href').replace('#', ''));
+        var target = document.getElementById(decodeURIComponent(event.currentTarget.getAttribute('href').replace('#', '')));
         var offset = target.getBoundingClientRect().top + window.scrollY;
         window.anime({
           targets  : document.scrollingElement,
@@ -245,7 +245,7 @@ NexT.utils = {
           scrollTop: offset + 10
         });
       });
-      return document.getElementById(link.getAttribute('href').replace('#', ''));
+      return document.getElementById(decodeURIComponent(link.getAttribute('href').replace('#', '')));
     });
 
     var tocElement = document.querySelector('.post-toc-wrap');
